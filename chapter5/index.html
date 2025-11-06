@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Examples</title>
+    <style>
+        .active { color: green; }
+        .highlight { background-color: yellow; }
+        .hidden { display: none; }
+        #content { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Main Heading</h1>
+    
+    <p class="content">This is the first paragraph.</p>
+    <p class="content">This is the second paragraph.</p>
+    
+    <button id="click-me">Click Me!</button>
+    
+    <div id="content">
+        <p>Original content</p>
+    </div>
+    
+    <img src="placeholder.jpg" alt="Placeholder">
+    
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+    
+    <div id="toggle" class="hidden">Toggle me</div>
+    <div class="remove-me">This will be removed</div>
+    
+    <form id="user-form">
+        <input type="text" id="name" placeholder="Enter name">
+        <input type="email" id="email" placeholder="Enter email">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <div>
+        <input type="text" id="todo-input" placeholder="Add todo item">
+        <button id="add-todo">Add</button>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="dom-manipulation.js"></script>
+</body>
+</html>
