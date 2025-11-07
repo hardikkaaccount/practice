@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background-color: #007cba;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005a87;
+        }
+        #output {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+            min-height: 50px;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asynchronous JavaScript Examples</h1>
+    
+    <div class="section">
+        <h2>Callbacks</h2>
+        <button id="callback-btn">Fetch Data with Callback</button>
+        <div id="callback-output"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Promises</h2>
+        <button id="promise-btn">Fetch Data with Promise</button>
+        <div id="promise-output"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Async/Await</h2>
+        <button id="async-btn">Fetch Data with Async/Await</button>
+        <div id="async-output"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Parallel Execution</h2>
+        <button id="parallel-btn">Run Parallel Promises</button>
+        <div id="parallel-output"></div>
+    </div>
+    
+    <script src="async-js.js"></script>
+    <script>
+        // UI interaction for demonstrating async concepts
+        document.getElementById('callback-btn').addEventListener('click', function() {
+            const output = document.getElementById('callback-output');
+            output.innerHTML = '<div class="loading">Loading with callback...</div>';
+            
+            setTimeout(() => {
+                fetchDataWithCallback((error, data) => {
+                    if (error) {
+                        output.innerHTML = `<div>Error: ${error.message}</div>`;
+                    } else {
+                        output.innerHTML = `<div>Success: ${data}</div>`;
+                    }
+                });
+            }, 100);
+        });
+        
+        document.getElementById('promise-btn').addEventListener('click', function() {
+            const output = document.getElementById('promise-output');
+            output.innerHTML = '<div class="loading">Loading with promise...</div>';
+            
+            fetchDataWithPromise()
+                .then(data => {
+                    output.innerHTML = `<div>Success: ${data}</div>`;
+                })
+                .catch(error => {
+                    output.innerHTML = `<div>Error: ${error.message}</div>`;
+                });
+        });
+        
+        document.getElementById('async-btn').addEventListener('click', async function() {
+            const output = document.getElementById('async-output');
+            output.innerHTML = '<div class="loading">Loading with async/await...</div>';
+            
+            try {
+                const data = await fetchDataWithPromise();
+                output.innerHTML = `<div>Success: ${data}</div>`;
+            } catch (error) {
+                output.innerHTML = `<div>Error: ${error.message}</div>`;
+            }
+        });
+        
+        document.getElementById('parallel-btn').addEventListener('click', async function() {
+            const output = document.getElementById('parallel-output');
+            output.innerHTML = '<div class="loading">Running parallel promises...</div>';
+            
+            try {
+                const startTime = Date.now();
+                const results = await Promise.all([
+                    fetchDataWithPromise(),
+                    getUserPromise(1),
+                    getPostsPromise(1)
+                ]);
+                const endTime = Date.now();
+                
+                output.innerHTML = `
+                    <div>All promises resolved in ${endTime - startTime}ms:</div>
+                    <div>Data: ${results[0]}</div>
+                    <div>User: ${JSON.stringify(results[1])}</div>
+                    <div>Posts count: ${results[2].length}</div>
+                `;
+            } catch (error) {
+                output.innerHTML = `<div>Error: ${error.message}</div>`;
+            }
+        });
+    </script>
+</body>
+</html>

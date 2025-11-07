@@ -33,6 +33,7 @@ const image = document.querySelector("img");
 if (image) {
   image.setAttribute("src", "new-image.jpg");
   image.setAttribute("alt", "New Image");
+  image.setAttribute("title", "New Image Description")
 }
 
 // Traversing the DOM

@@ -1,0 +1,66 @@
+/* Color Changer Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#color-box {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#color-code {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+#change-color {
+  background-color: #007cba;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s;
+}
+
+#change-color:hover {
+  background-color: #005a87;
+}
+
+.instructions {
+  color: #666;
+  font-style: italic;
+}

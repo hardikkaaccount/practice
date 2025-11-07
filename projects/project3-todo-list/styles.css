@@ -1,0 +1,171 @@
+/* Todo List Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+#add-btn {
+  background-color: #007cba;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#add-btn:hover {
+  background-color: #005a87;
+}
+
+#todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+#todo-list li:last-child {
+  border-bottom: none;
+}
+
+#todo-list li.completed {
+  opacity: 0.6;
+}
+
+#todo-list li.completed span {
+  text-decoration: line-through;
+}
+
+#todo-list input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+#todo-list span {
+  flex: 1;
+  font-size: 16px;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 20px !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+}
+
+#count {
+  color: #666;
+}
+
+.filters {
+  display: flex;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+}
+
+.filter-btn.active {
+  background-color: #007cba;
+  color: white;
+  border-color: #007cba;
+}
+
+#clear-completed {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+}
+
+#clear-completed:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filters {
+    order: -1;
+  }
+}

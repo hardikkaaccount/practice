@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced DOM Manipulation</title>
+    <style>
+        .dynamic-element {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .example {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        #container {
+            margin: 20px 0;
+        }
+        form {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced DOM Manipulation</h1>
+    
+    <div class="example">Original element</div>
+    
+    <div id="container">
+        <p>Container for dynamic elements</p>
+    </div>
+    
+    <template id="item-template">
+        <div class="templated-item">
+            <h3>Templated Item</h3>
+            <p>This element was created from a template</p>
+        </div>
+    </template>
+    
+    <script src="advanced-dom.js"></script>
+</body>
+</html>
