@@ -12,8 +12,8 @@ class User {
     }
 }
 
-const hitesh = new User("hitesh")
-// console.log(hitesh.createId())
+const Hardik = new User("Hardik")
+// console.log(Hardik.createId())
 
 class Teacher extends User {
     constructor(username, email){
