@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { background-color: lightblue; }
+    #list { list-style: none; padding: 0; }
+  </style>
+</head>
+<body>
+  <h1>My Task List</h1>
+  <h3>Pending Tasks</h3>
+  <ul id="list"></ul>
+  <form id="new-task-form">
+    <input type="text" id="new-task-title">
+    <button type="submit">Add Item</button>
+  </form>
+  <h3>Completed Tasks</h3>
+  <ul id="completed-list"></ul>
+  <script src="dist/index.js" type="module"></script>
+</body>
+</html>
