@@ -33,6 +33,7 @@ pids
 # OS generated files
 Thumbs.db
 
+.vscode
 # Build tools cache
 .npm/
 .parcel-cache/
