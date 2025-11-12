@@ -414,8 +414,8 @@ function jkq<T>(arg: T): T {
 // Default and Named Exports
 
 
-import { User, getUser } from './Modules/user';
-import Payment from './Modules/payment';
+import { User, getUser } from './Modules/user.js';
+import Payment from './Modules/payment.js';
 User('Hardik', 'SDE');
 getUser();
 
@@ -503,3 +503,16 @@ function switchOff(remote: tvkaremote | carKaRemote){
 
 switchOff(remote1);
 switchOff(remote2);
+
+
+// generics
+function mergeObjects<T, U>(obj1: T, obj2: U) : T & U {
+    return {...obj1, ...obj2}
+}
+
+console.log(mergeObjects({name: "Hardik"}, {age: 20}));
+
+// index.ts
+import { jgjhgh } from "./Modules/utils.js";
+ // Changed from './utils.js' to "./Modules/utils.js"
+console.log(jgjhgh(2, 3)); // ✅ Works

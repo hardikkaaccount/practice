@@ -1,0 +1,1 @@
+export function jgjhgh(a: number, b: number): number;

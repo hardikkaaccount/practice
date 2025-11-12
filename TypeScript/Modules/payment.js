@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Payment {
+export default class Payment {
     id;
     amount;
     date;
@@ -10,5 +8,4 @@ class Payment {
         this.date = date;
     }
 }
-exports.default = Payment;
 //# sourceMappingURL=payment.js.map

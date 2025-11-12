@@ -7,7 +7,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "module": "Node16",
+    "moduleResolution": "node16",
     "target": "esnext",
     "types": [],
     // For nodejs:
@@ -40,5 +41,9 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    
+    // ESM-specific options
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   }
 }
