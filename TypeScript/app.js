@@ -1,3 +1,5 @@
+"use strict";
+// Object.defineProperty(exports, "__esModule", { value: true });
 function hardik() {
     console.log("Hardik");
 }
@@ -302,12 +304,12 @@ function jkq(arg) {
 // Modules
 // Export and Import
 // Default and Named Exports
-import { User, getUser } from './Modules/user.js';
-import Payment from './Modules/payment.js';
-User('Hardik', 'SDE');
-getUser();
-let j1 = new Payment(1, 100, "2021-01-01");
-console.log(j1);
+// import { User, getUser } from './Modules/user.js';
+// import Payment from './Modules/payment.js';
+// User('Hardik', 'SDE');
+// getUser();
+// let j1 = new Payment(1, 100, "2021-01-01");
+// console.log(j1);
 // type Assertions
 // Type casting
 // non-null assertions
@@ -380,7 +382,8 @@ function mergeObjects(obj1, obj2) {
 }
 console.log(mergeObjects({ name: "Hardik" }, { age: 20 }));
 // index.ts
-import { jgjhgh } from "./Modules/utils.js";
+// import { jgjhgh } from "./Modules/utils.js";
 // Changed from './utils.js' to "./Modules/utils.js"
-console.log(jgjhgh(2, 3)); // ✅ Works
+// console.log(jgjhgh(2, 3)); // ✅ Works
+console.log("Hardik");
 //# sourceMappingURL=app.js.map

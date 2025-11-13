@@ -1,11 +1,6 @@
-export default class Payment {
-    id;
-    amount;
-    date;
-    constructor(id, amount, date) {
-        this.id = id;
-        this.amount = amount;
-        this.date = date;
-    }
-}
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// export default class Payment {
+//     constructor(public id: number, public amount: number, public date: string) {}
+// }
 //# sourceMappingURL=payment.js.map

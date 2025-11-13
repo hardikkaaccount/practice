@@ -414,13 +414,13 @@ function jkq<T>(arg: T): T {
 // Default and Named Exports
 
 
-import { User, getUser } from './Modules/user.js';
-import Payment from './Modules/payment.js';
-User('Hardik', 'SDE');
-getUser();
+// import { User, getUser } from './Modules/user.js';
+// import Payment from './Modules/payment.js';
+// User('Hardik', 'SDE');
+// getUser();
 
-let j1 = new Payment(1, 100, "2021-01-01");
-console.log(j1);
+// let j1 = new Payment(1, 100, "2021-01-01");
+// console.log(j1);
 
 
 // type Assertions
@@ -513,6 +513,8 @@ function mergeObjects<T, U>(obj1: T, obj2: U) : T & U {
 console.log(mergeObjects({name: "Hardik"}, {age: 20}));
 
 // index.ts
-import { jgjhgh } from "./Modules/utils.js";
+// import { jgjhgh } from "./Modules/utils.js";
  // Changed from './utils.js' to "./Modules/utils.js"
-console.log(jgjhgh(2, 3)); // ✅ Works
+// console.log(jgjhgh(2, 3)); // ✅ Works
+
+console.log("Hardik");

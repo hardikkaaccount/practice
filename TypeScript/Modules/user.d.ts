@@ -1,3 +1,2 @@
-export declare function User(name: string, role: string): void;
-export declare function getUser(): void;
+export {};
 //# sourceMappingURL=user.d.ts.map
