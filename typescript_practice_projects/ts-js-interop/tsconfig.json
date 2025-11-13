@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true, // Automatic Typeing with jsDoc comments
+    "checkJs": true, // Enable checking of JavaScript files for errors
+    "declaration": true, // Generate .d.ts declaration files
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "typeRoots": ["src/types", "node_modules/@types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
