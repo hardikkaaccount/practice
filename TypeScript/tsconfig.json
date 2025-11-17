@@ -4,10 +4,10 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
-
+    // "experimentalDecorators": false,
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "Node16",
+    "module": "node16",
     "moduleResolution": "node16",
     "target": "esnext",
     "types": [],

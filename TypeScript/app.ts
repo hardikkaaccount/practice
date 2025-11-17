@@ -1,6 +1,6 @@
 function hardik(){
     console.log("Hardik")
-}
+};
 console.log(hardik)
 let num : [string, number] = ['a',1]
 
@@ -518,3 +518,53 @@ console.log(mergeObjects({name: "Hardik"}, {age: 20}));
 // console.log(jgjhgh(2, 3)); // ✅ Works
 
 console.log("Hardik");
+
+
+// decorators
+
+// Class decorator:
+// type ClassDecorator = (value: Function, context: ClassDecoratorContext) => Function | void;
+
+function Logger(target: any) {
+  console.log("Class Created:", target.name);
+}
+
+@Logger
+class User {
+  name = "Alice";
+}
+
+const u = new User();
+
+// e2
+
+function AddVersion(target: any) {
+  target.version = "1.0.0";
+}
+
+@AddVersion
+class API {
+    static version = "1.3.0";
+}
+
+console.log(API.version); // 1.0.0
+
+function AddRole(target: any) {
+  target.role = "Admin";
+}
+
+@AddRole
+class User5 {
+  name = "Alice";
+  constructor(public role: string, y: string) {
+    this.name = y;
+  }
+}
+
+console.log((User5 as any).role);
+const u2 = new User5('Abdul', 'Md Aman')
+console.log(u2)
+// ddddd
+
+
+

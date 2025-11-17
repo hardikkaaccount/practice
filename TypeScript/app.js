@@ -1,8 +1,9 @@
 "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", { value: true });
 function hardik() {
     console.log("Hardik");
 }
+;
 console.log(hardik);
 let num = ['a', 1];
 console.log(num);
@@ -386,4 +387,40 @@ console.log(mergeObjects({ name: "Hardik" }, { age: 20 }));
 // Changed from './utils.js' to "./Modules/utils.js"
 // console.log(jgjhgh(2, 3)); // ✅ Works
 console.log("Hardik");
+// decorators
+// Class decorator:
+// type ClassDecorator = (value: Function, context: ClassDecoratorContext) => Function | void;
+function Logger(target) {
+    console.log("Class Created:", target.name);
+}
+@Logger
+class User {
+    name = "Alice";
+}
+const u = new User();
+// e2
+function AddVersion(target) {
+    target.version = "1.0.0";
+}
+@AddVersion
+class API {
+    static version = "1.3.0";
+}
+console.log(API.version); // 1.0.0
+function AddRole(target) {
+    target.role = "Admin";
+}
+@AddRole
+class User5 {
+    role;
+    name = "Alice";
+    constructor(role, y) {
+        this.role = role;
+        this.name = y;
+    }
+}
+console.log(User5.role);
+const u2 = new User5('Abdul', 'Md Aman');
+console.log(u2);
+// ddddd
 //# sourceMappingURL=app.js.map
